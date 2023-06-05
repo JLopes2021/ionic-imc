@@ -7,37 +7,40 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="geral">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Tab 1</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-<b class="title-large">Calcule aqui o seu IMC</b>
-<ion-grid>
-  <ion-row>
-    <ion-col size-md="6">
-      <div id="container">
-        <ion-item>
-          <ion-label position="floating" class="nomeLabel">Seu IMC</ion-label>
-          <ion-input required="required"  type="text" [(ngModel)]="altura" maxlength="3" placeholder="Insira a sua altura em cm" pattern="[0-9]{3}" ></ion-input>
-          <ion-input required="required"  type="text" [(ngModel)]="peso" maxlength="3" placeholder="Insira o seu peso em kg"></ion-input>
-          <ion-button  color="dark" (click)="verificarImc()">Verificar</ion-button>
-        </ion-item>
-        <!--Dicas aqui serão por cards-->
-        <ion-card readonly="true" class="card">
-          <ion-card-header>
-            <ion-card-title>{{resultado}}</ion-card-title>
-            <ion-card-subtitle>{{imcRes}}</ion-card-subtitle>
+  <b class="title-large">Calcule aqui o seu IMC</b>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6">
+        <div id="container">
+          <ion-item>
+            <ion-label position="floating" class="nomeLabel">Seu IMC</ion-label>
+            <ion-input required="required"  type="text" [(ngModel)]="altura" maxlength="3" placeholder="Insira a sua altura em cm" pattern="[0-9]{3}" ></ion-input>
+            <ion-input required="required"  type="text" [(ngModel)]="peso" maxlength="3" placeholder="Insira o seu peso em kg"></ion-input>
+            <ion-button  color="dark" (click)="verificarImc()">Verificar</ion-button>
+          </ion-item>
+          <!--Dicas aqui serão por cards-->
+          <ion-card readonly="true" class="card">
+            <ion-card-header>
+              <ion-card-title>{{resultado}}</ion-card-title>
+              <ion-card-subtitle>{{imcRes}}</ion-card-subtitle>
 
-          </ion-card-header>
-          <ion-card-content>
-            {{results}}
-          </ion-card-content>
-        </ion-card>
-      </div>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+            </ion-card-header>
+            <ion-card-content>
+              {{results}}
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </div>
 
 </ion-content>

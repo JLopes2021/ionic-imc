@@ -41,27 +41,27 @@ export class Tab1Page {
       } else if (imc >= 18.5 && imc <= 24.99) {
         result = "Peso Normal"
         this.resultado = result;
-        const str = imc.toString();
+        const str ="Seu IMC é de: " + imc.toString();
         this.imcRes = str;
       } else if (imc >= 25 && imc <= 29.99) {
         result = "Acima do Peso"
         this.resultado = result;
-        const str = imc.toString();
+        const str = "Seu IMC é de: " + imc.toString();
         this.imcRes = str;
       } else if (imc >= 30 && imc <= 34.99) {
         result = "Grau 1 de Obesedidade"
         this.resultado = result;
-        const str = imc.toString();
+        const str = "Seu IMC é de: " + imc.toString();
         this.imcRes = str;
       } else if (imc >= 35 && imc <= 40) {
         result = "Grau 2 de Obesedidade"
         this.resultado = result;
-        const str = imc.toString();
+        const str ="Seu IMC é de: " + imc.toString();
         this.imcRes = str;
       } else {
         result = "Grau 3 de Obesedidade"
         this.resultado = result;
-        const str = imc.toString();
+        const str ="Seu IMC é de: " + imc.toString();
         this.imcRes = str;
       }
 
