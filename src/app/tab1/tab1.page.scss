@@ -1,6 +1,24 @@
-ion-col, #container {
+ion-grid,ion-row {
   background-color: #135d54;
   border: solid 1px #fff;
   color: #fff;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  background-color: #04413a;
+}
+
+.title-large{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 10vmin;
+}
+ion-button{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
 }

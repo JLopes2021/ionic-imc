@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      HomePage
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,22 +13,31 @@
     </ion-toolbar>
   </ion-header>
 
-<b>Calcule aqui o seu IMC</b>
+<b class="title-large">Calcule aqui o seu IMC</b>
 <ion-grid>
   <ion-row>
     <ion-col size-md="6">
       <div id="container">
         <ion-item>
-          <ion-label position="floating" class="nomeLabel">IMC do Nadador</ion-label>
-          <ion-input type="text" [(ngModel)]="altura" maxlength="3" placeholder="Insira a sua altura em cm" pattern="[0-9]{3}" ></ion-input>
-          <ion-input type="text" [(ngModel)]="peso" maxlength="3" placeholder="Insira o seu peso em kg"></ion-input>
-          <ion-button expand="block" color="dark" (click)="verificarImc()">Verificar</ion-button>
+          <ion-label position="floating" class="nomeLabel">Seu IMC</ion-label>
+          <ion-input required="required"  type="text" [(ngModel)]="altura" maxlength="3" placeholder="Insira a sua altura em cm" pattern="[0-9]{3}" ></ion-input>
+          <ion-input required="required"  type="text" [(ngModel)]="peso" maxlength="3" placeholder="Insira o seu peso em kg"></ion-input>
+          <ion-button  color="dark" (click)="verificarImc()">Verificar</ion-button>
         </ion-item>
-        <ion-input value="{{resultado}}" readonly="true"></ion-input>
+        <!--Dicas aqui serão por cards-->
+        <ion-card readonly="true" class="card">
+          <ion-card-header>
+            <ion-card-title>{{resultado}}</ion-card-title>
+            <ion-card-subtitle>{{imcRes}}</ion-card-subtitle>
+
+          </ion-card-header>
+          <ion-card-content>
+            {{results}}
+          </ion-card-content>
+        </ion-card>
       </div>
     </ion-col>
   </ion-row>
 </ion-grid>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
