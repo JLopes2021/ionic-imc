@@ -29,12 +29,24 @@ if ( a_tratada > 2.3){
   }else{
     if (imc <= 18.5){
       result = "Baixo Peso"
+      this.resultado = result;
+    }else if(imc >= 18.5 && imc <= 24.99){
+      result = "Peso Normal"
+      this.resultado = result;
+    }else if(imc >= 25 && imc <= 29.99){
+      result = "Acima do Peso "
+      this.resultado = result;
+    }else if(imc >= 30 && imc <= 34.99){
+      result = "Grau 1 de Obsedidade"
+      this.resultado = result;
+    }else if(imc >= 35 && imc <= 40){
+      result = "Grau 2 de Obsedidade"
+      this.resultado = result;
     }else{
-      result = "Acima"
+      result = "Grau 3 de Obsedidade"
+      this.resultado = result;
     }
-    console.log(imc, a_tratada)
 
-    this.resultado = result;
   }
   }
 
